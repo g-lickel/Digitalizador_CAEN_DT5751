@@ -1,6 +1,9 @@
 G. Lickel - 14 fev. 2024 (Rev. 0)
 
 # Tutorial de instalação e uso do Digitalizador da CAEN DT5751 no Ubuntu 20.04
+## Disclaimer
+This is an unofficial tutorial for simple installation and use, with absolutelly no connection with CAEN. For official support, access [caen.it](caen.it) website.
+
 ## Instalação
 ### Pré-requisitos
 Antes de instalar os softwares de leitura do digitalizador, é necessário alguns pré-requisitos.
