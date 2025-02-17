@@ -7,7 +7,7 @@ This is an unofficial tutorial for simple installation and use, with absolutely 
 ## Instalação
 ### Pré-requisitos
 Antes de instalar os softwares de leitura do digitalizador, é necessário alguns pré-requisitos.
-1. Verifique se os software `gnuplot` e `DKMS` estão instalados no seu Linux. Se não estiverem, instale-os.
+1. Verifique se os softwares `gnuplot` e `DKMS` estão instalados no seu Linux. Se não estiverem, instale-os.
 2. Entre no site da CAEN, [caen.it](https://www.caen.it/become-mycaenplus-user/), e crie uma conta gratuitamente. Essa conta será necessária para baixar os programas.
 3. No site, baixe a biblioteca [CAENVMELib](https://www.caen.it/products/caenvmelib-library/). Para o Linux, baixe o arquivo `.tgz`.
 4. Baixe também o arquivo `.tgz` da biblioteca [CAENComm](https://www.caen.it/products/caencomm-library/).
@@ -34,6 +34,7 @@ Se os programas rodarem sem erro, as bibliotecas e drivers devem ter sido instal
 
 ### WaveDump e CAENSCOPE
 Em nosso tutorial, usaremos dois softwares da CAEN.
+
 7. Novamente no site da CAEN, instale o arquivo `.tar.gz` do software [WaveDump](https://www.caen.it/products/caen-wavedump/).
 8. Em seguida, baixe o `.tar.gz` do [CAENSCOPE](https://www.caen.it/products/caenscope/).
 
@@ -124,11 +125,8 @@ gedit /etc/wavedump/WaveDumpConfig.txt &
 Este é o arquivo de configuração do WaveDump. Vamos alterar os seguintes parâmetros, a partir do arquivo padrão:
 
 1. Como se trata de uma leitura de sinal negativo, vamos mudar o parâmetro `PULSE_POLARITY` para `NEGATIVE`.
-2. No final do documento, abaixo da linha `[0]`, vamos alterar os parâmetros para leitura.
-	A partir do valor de `DC Offset` anotado do Scope, determinamos $\mathtt{BASELINE\_LEVEL} = \mathtt{DC\ Offset}/655.35$. O resultado deve ser um número entre 0 e 100, representando a porcentagem da *baseline*.
-	Em nosso exemplo, teremos `BASELINE_LEVEL         13` (dado que a conta dá 13,17%)
-3. A partir do valor de `Threshold`, determinamos `TRIGGER_THRESHOLD`. Como configuramos a valor do `DC Offset` de forma que a *baseline* ficasse mais próxima possível de `1000` ADC, então $\mathtt{TRIGGER\_THRESHOLD} = 1000 - \mathtt{Threshold}$.
-	Neste exemplo, teremos `TRIGGER_THRESHOLD      50`.
+2. No final do documento, abaixo da linha `[0]`, vamos alterar os parâmetros para leitura. A partir do valor de DC Offset anotado do Scope, determinamos . O resultado deve ser um número entre 0 e 100, representando a porcentagem da baseline. Em nosso exemplo, teremos BASELINE_LEVEL         13 (dado que a conta dá 13,17%)
+3. A partir do valor de `Threshold`, determinamos `TRIGGER_THRESHOLD`. Como configuramos a valor do `DC Offset` de forma que a *baseline* ficasse mais próxima possível de `1000` ADC, então $\mathtt{TRIGGER\_THRESHOLD} = 1000 - \mathtt{Threshold}$. Neste exemplo, teremos TRIGGER_THRESHOLD      50.
 
 Por fim, o arquivo `WaveDumpConfig.txt` deve ficar
 ```wavedump
