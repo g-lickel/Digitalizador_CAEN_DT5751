@@ -1,8 +1,8 @@
-G. Lickel - 14 fev. 2024 (Rev. 0)
+G. Lickel - 17 fev. 2024 (Rev. 0)
 
 # Tutorial de instalação e uso do Digitalizador da CAEN DT5751 no Ubuntu 20.04
 ## Disclaimer
-This is an unofficial tutorial for simple installation and use, with absolutelly no connection with CAEN. For official support, access [caen.it](caen.it) website.
+This is an unofficial tutorial for simple installation and use, with absolutely no connection to CAEN. For official support, access the [caen.it](caen.it) website.
 
 ## Instalação
 ### Pré-requisitos
@@ -283,4 +283,4 @@ wavedump
 ```
 Tendo conectado com êxito, inicie as medidas clicando `s`. Ao clicar `Shift+P` você pode visualizar as medições serem plotadas em tempo real.
 
-Para salvar vários eventos, clique `Shift+W` e depois `Shift+W` para parar a gravação. Os eventos registrados estarão em um arquivo de texto na pasta `/Medidas teste/` que você executou o programa.
+Para salvar vários eventos, clique `Shift+W` e depois `Shift+W` para parar a gravação. Os eventos registrados estarão em um arquivo de texto na pasta `/Medidas teste/` que você executou o programa. Este arquivo pode ser usado para análise dos sinais. Note que as contagens são dadas em termos de canais de ADC, a serem convertidas por você em volts, por exemplo.
