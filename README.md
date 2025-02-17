@@ -1,4 +1,4 @@
-G. Lickel - 17 fev. 2024 (Rev. 0)
+G. Lickel - 17 fev. 2025 (Rev. 0)
 
 # Tutorial de instalação e uso do Digitalizador da CAEN DT5751 no Ubuntu 20.04
 ## Disclaimer
